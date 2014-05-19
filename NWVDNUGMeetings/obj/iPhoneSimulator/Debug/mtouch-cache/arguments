@@ -1,0 +1,29 @@
+# Version: 7.2.2.2 (db4427f)
+# [first argument, ignore] # /Users/mike.hamilton/Projects/NWVDNUGiOs/NWVDNUGMeetings/bin/iPhoneSimulator/Debug/mtouch.exe
+/Developer/MonoTouch/usr/bin/mtouch \
+	-sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--cache \
+	/Users/mike.hamilton/Projects/NWVDNUGiOs/NWVDNUGMeetings/obj/iPhoneSimulator/Debug/mtouch-cache \
+	--nomanifest \
+	--nosign \
+	-sim \
+	/Users/mike.hamilton/Projects/NWVDNUGiOs/NWVDNUGMeetings/bin/iPhoneSimulator/Debug/NWVDNUGMeetings.app \
+	-r \
+	/Users/mike.hamilton/Projects/NWVDNUGiOs/NWVDNUG.Core/bin/Debug/NWVDNUG.Core.dll \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/System.dll \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/System.Xml.dll \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/System.Core.dll \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/monotouch.dll \
+	-debug \
+	-nolink \
+	-sdk \
+	7.1 \
+	-targetver \
+	7.0 \
+	--abi=i386 \
+	/Users/mike.hamilton/Projects/NWVDNUGiOs/NWVDNUGMeetings/bin/iPhoneSimulator/Debug/NWVDNUGMeetings.exe \

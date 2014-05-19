@@ -1,0 +1,242 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		381CD8870000000000000000 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BADE5250000000000000000 /* UIKit.framework */; };
+		19B27BBA0000000000000000 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4388580000000000000000 /* MapKit.framework */; };
+		2EE5E4520000000000000000 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3276F0F00000000000000000 /* Foundation.framework */; };
+		2250C69B0000000000000000 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E1D3390000000000000000 /* CoreGraphics.framework */; };
+		298B7CC90000000000000000 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C89670000000000000000 /* Default-568h@2x.png */; };
+		3B2DD8C30000000000000000 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EBEE5610000000000000000 /* Info.plist */; };
+		295899AD0000000000000000 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CE9A64B0000000000000000 /* Entitlements.plist */; };
+		17835A970000000000000000 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B1467350000000000000000 /* MainStoryboard_iPhone.storyboard */; };
+		33D8DC6B0000000000000000 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3769E9090000000000000000 /* MainStoryboard_iPad.storyboard */; };
+		2AA1E8360000000000000000 /* AppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 2E32F4D40000000000000000 /* AppDelegate.h */; };
+		1FBBDF400000000000000000 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 234CEBDE0000000000000000 /* AppDelegate.m */; };
+		388054760000000000000000 /* MasterViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 3C1161140000000000000000 /* MasterViewController.h */; };
+		DB3BD0E00000000000000000 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1144C9AC0000000000000000 /* MasterViewController.m */; };
+		2D9A4B800000000000000000 /* DetailViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 312B581E0000000000000000 /* DetailViewController.h */; };
+		26454F280000000000000000 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D65BC60000000000000000 /* DetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3115A6860000000000000000 /* NWVDNUGMeetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "NWVDNUGMeetings.app"; path = "NWVDNUGMeetings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BADE5250000000000000000 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "UIKit.framework"; path = "System/Library/Frameworks/UIKit.framework"; sourceTree = SDKROOT; };
+		1D4388580000000000000000 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "MapKit.framework"; path = "System/Library/Frameworks/MapKit.framework"; sourceTree = SDKROOT; };
+		3276F0F00000000000000000 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; };
+		25E1D3390000000000000000 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreGraphics.framework"; path = "System/Library/Frameworks/CoreGraphics.framework"; sourceTree = SDKROOT; };
+		2D1C89670000000000000000 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3EBEE5610000000000000000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info.plist"; path = "Info.plist"; sourceTree = "<group>"; };
+		2CE9A64B0000000000000000 /* Entitlements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Entitlements.plist"; path = "Entitlements.plist"; sourceTree = "<group>"; };
+		1B1467350000000000000000 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "MainStoryboard_iPhone.storyboard"; path = "MainStoryboard_iPhone.storyboard"; sourceTree = "<group>"; };
+		3769E9090000000000000000 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "MainStoryboard_iPad.storyboard"; path = "MainStoryboard_iPad.storyboard"; sourceTree = "<group>"; };
+		2E32F4D40000000000000000 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate.h"; path = "AppDelegate.h"; sourceTree = "<group>"; };
+		234CEBDE0000000000000000 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate.m"; path = "AppDelegate.m"; sourceTree = "<group>"; };
+		3C1161140000000000000000 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MasterViewController.h"; path = "MasterViewController.h"; sourceTree = "<group>"; };
+		1144C9AC0000000000000000 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "MasterViewController.m"; path = "MasterViewController.m"; sourceTree = "<group>"; };
+		312B581E0000000000000000 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DetailViewController.h"; path = "DetailViewController.h"; sourceTree = "<group>"; };
+		29D65BC60000000000000000 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "DetailViewController.m"; path = "DetailViewController.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD0EE9200000000000000000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				381CD8870000000000000000 /* UIKit.framework in Frameworks */,
+				19B27BBA0000000000000000 /* MapKit.framework in Frameworks */,
+				2EE5E4520000000000000000 /* Foundation.framework in Frameworks */,
+				2250C69B0000000000000000 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2DEA60200000000000000000 = {
+			isa = PBXGroup;
+			children = (
+				1884146C0000000000000000 /* NWVDNUGMeetings */,
+				3C2E92980000000000000000 /* Frameworks */,
+				23373A460000000000000000 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		23373A460000000000000000 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3115A6860000000000000000 /* NWVDNUGMeetings.app */,
+			);
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		3C2E92980000000000000000 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BADE5250000000000000000 /* UIKit.framework */,
+				1D4388580000000000000000 /* MapKit.framework */,
+				3276F0F00000000000000000 /* Foundation.framework */,
+				25E1D3390000000000000000 /* CoreGraphics.framework */,
+			);
+			name = "Frameworks";
+			sourceTree = "<group>";
+		};
+		1884146C0000000000000000 /* NWVDNUGMeetings */ = {
+			isa = PBXGroup;
+			children = (
+				2E32F4D40000000000000000 /* AppDelegate.h */,
+				2D1C89670000000000000000 /* Default-568h@2x.png */,
+				312B581E0000000000000000 /* DetailViewController.h */,
+				2CE9A64B0000000000000000 /* Entitlements.plist */,
+				3EBEE5610000000000000000 /* Info.plist */,
+				3769E9090000000000000000 /* MainStoryboard_iPad.storyboard */,
+				1B1467350000000000000000 /* MainStoryboard_iPhone.storyboard */,
+				3C1161140000000000000000 /* MasterViewController.h */,
+				219DD71D0000000000000000 /* Supporting Files */,
+			);
+			name = "NWVDNUGMeetings";
+			sourceTree = "<group>";
+		};
+		219DD71D0000000000000000 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				234CEBDE0000000000000000 /* AppDelegate.m */,
+				29D65BC60000000000000000 /* DetailViewController.m */,
+				1144C9AC0000000000000000 /* MasterViewController.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1EA7BE1C0000000000000000 /* NWVDNUGMeetings */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 266280AC0000000000000000 /* Build configuration list for PBXNativeTarget "NWVDNUGMeetings" */;
+			buildPhases = (
+				386AA2DE0000000000000000 /* Sources */,
+				DD0EE9200000000000000000 /* Frameworks */,
+				215542690000000000000000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NWVDNUGMeetings";
+			productName = "NWVDNUGMeetings";
+			productReference = 3115A6860000000000000000 /* NWVDNUGMeetings.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		13F498420000000000000000 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 181E4E340000000000000000 /* Build configuration list for PBXProject "NWVDNUGMeetings" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2DEA60200000000000000000;
+			productRefGroup = 23373A460000000000000000 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1EA7BE1C0000000000000000 /* NWVDNUGMeetings */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		215542690000000000000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				298B7CC90000000000000000 /* Default-568h@2x.png in Resources */,
+				3B2DD8C30000000000000000 /* Info.plist in Resources */,
+				295899AD0000000000000000 /* Entitlements.plist in Resources */,
+				17835A970000000000000000 /* MainStoryboard_iPhone.storyboard in Resources */,
+				33D8DC6B0000000000000000 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		386AA2DE0000000000000000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AA1E8360000000000000000 /* AppDelegate.h in Sources */,
+				1FBBDF400000000000000000 /* AppDelegate.m in Sources */,
+				388054760000000000000000 /* MasterViewController.h in Sources */,
+				DB3BD0E00000000000000000 /* MasterViewController.m in Sources */,
+				2D9A4B800000000000000000 /* DetailViewController.h in Sources */,
+				26454F280000000000000000 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1278669D0000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+			};
+			name = MonoTouch;
+		};
+		D6B285A00000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				PRODUCT_NAME = "NWVDNUGMeetings";
+				WRAPPER_EXTENSION = app;
+			};
+			name = MonoTouch;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		181E4E340000000000000000 /* Build configuration list for PBXProject "NWVDNUGMeetings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1278669D0000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+		266280AC0000000000000000 /* Build configuration list for PBXNativeTarget "NWVDNUGMeetings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6B285A00000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 13F498420000000000000000 /* Project object */;
+}

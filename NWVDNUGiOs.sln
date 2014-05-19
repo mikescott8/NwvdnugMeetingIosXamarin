@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWVDNUGMeetings", "NWVDNUGMeetings\NWVDNUGMeetings.csproj", "{96E9FDE9-64E3-4B7C-B6B5-52A9D5270A3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWVDNUG.Core", "NWVDNUG.Core\NWVDNUG.Core.csproj", "{DF734B5E-2D15-44B3-9E53-C22766D0D874}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96E9FDE9-64E3-4B7C-B6B5-52A9D5270A3B}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{96E9FDE9-64E3-4B7C-B6B5-52A9D5270A3B}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{96E9FDE9-64E3-4B7C-B6B5-52A9D5270A3B}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{96E9FDE9-64E3-4B7C-B6B5-52A9D5270A3B}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{96E9FDE9-64E3-4B7C-B6B5-52A9D5270A3B}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{96E9FDE9-64E3-4B7C-B6B5-52A9D5270A3B}.Debug|iPhone.Build.0 = Debug|iPhone
+		{96E9FDE9-64E3-4B7C-B6B5-52A9D5270A3B}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{96E9FDE9-64E3-4B7C-B6B5-52A9D5270A3B}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{96E9FDE9-64E3-4B7C-B6B5-52A9D5270A3B}.Release|iPhone.ActiveCfg = Release|iPhone
+		{96E9FDE9-64E3-4B7C-B6B5-52A9D5270A3B}.Release|iPhone.Build.0 = Release|iPhone
+		{96E9FDE9-64E3-4B7C-B6B5-52A9D5270A3B}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{96E9FDE9-64E3-4B7C-B6B5-52A9D5270A3B}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{DF734B5E-2D15-44B3-9E53-C22766D0D874}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{DF734B5E-2D15-44B3-9E53-C22766D0D874}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{DF734B5E-2D15-44B3-9E53-C22766D0D874}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{DF734B5E-2D15-44B3-9E53-C22766D0D874}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{DF734B5E-2D15-44B3-9E53-C22766D0D874}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{DF734B5E-2D15-44B3-9E53-C22766D0D874}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{DF734B5E-2D15-44B3-9E53-C22766D0D874}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{DF734B5E-2D15-44B3-9E53-C22766D0D874}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{DF734B5E-2D15-44B3-9E53-C22766D0D874}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{DF734B5E-2D15-44B3-9E53-C22766D0D874}.Release|iPhone.Build.0 = Release|Any CPU
+		{DF734B5E-2D15-44B3-9E53-C22766D0D874}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{DF734B5E-2D15-44B3-9E53-C22766D0D874}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = NWVDNUGMeetings\NWVDNUGMeetings.csproj
+	EndGlobalSection
+EndGlobal
