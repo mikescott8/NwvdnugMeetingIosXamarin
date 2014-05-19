@@ -48,7 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="restsharp">
-      <InstallationInProgress>True</InstallationInProgress>
       <Version>104.1.0</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
