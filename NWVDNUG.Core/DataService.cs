@@ -3,6 +3,8 @@ using System.Net.Http;
 using System.IO;
 using System.Text;
 using RestSharp;
+using System.Collections.Generic;
+using NWVDNUG.Core.Contracts;
 
 namespace NWVDNUG.Core
 {
@@ -13,18 +15,18 @@ namespace NWVDNUG.Core
 
 		}
 
-		public static string FetchMeetings()
+		public static void FetchMeetings(Action<List<MeetingInfo>> callback)
 		{
-			string responseStr = null;
 			string uri = "http://www.nwvdnug.org/api/";
 
 			var client = new RestClient (uri);
 
 			var request = new RestRequest ("upcomingmeetings/");
-			client.ExecuteAsync (request, response => {
-				Console.WriteLine (response.Content);
+			client.ExecuteAsync<List<MeetingInfo>> (request, response => {
+				if (callback != null) {
+					callback.Invoke(response.Data);
+				}
 			});
-			return responseStr;
 		}
 	}
 }
