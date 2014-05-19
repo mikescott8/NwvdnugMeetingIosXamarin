@@ -4,4 +4,5 @@ System.Core.dll
 Mono.Dynamic.Interpreter.dll
 System.Xml.dll
 NWVDNUG.Core.dll
-System.Net.Http.dll
+RestSharp.MonoTouch.dll
+System.Xml.Linq.dll
