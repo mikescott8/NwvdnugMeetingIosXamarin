@@ -13,7 +13,7 @@ namespace NWVDNUGMeetings
 
 		public MasterViewController (IntPtr handle) : base (handle)
 		{
-			Title = NSBundle.MainBundle.LocalizedString ("Master", "Master");
+//			Title = NSBundle.MainBundle.LocalizedString ("Master", "Master");
 			
 			if (UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad) {
 				PreferredContentSize = new SizeF (320f, 600f);
