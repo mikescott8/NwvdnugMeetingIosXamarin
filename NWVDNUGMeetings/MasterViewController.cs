@@ -28,14 +28,6 @@ namespace NWVDNUGMeetings
 			set;
 		}
 
-		void AddNewItem (object sender, EventArgs args)
-		{
-			dataSource.Data.Add (new NWVDNUG.Core.Contracts.MeetingInfo());
-
-			using (var indexPath = NSIndexPath.FromRowSection (0, 0))
-				TableView.InsertRows (new NSIndexPath[] { indexPath }, UITableViewRowAnimation.Automatic);
-		}
-
 		public override void DidReceiveMemoryWarning ()
 		{
 			// Releases the view if it doesn't have a superview.
@@ -48,14 +40,12 @@ namespace NWVDNUGMeetings
 		{
 			base.ViewDidLoad ();
 
-			// Perform any additional setup after loading the view, typically from a nib.
-			//NavigationItem.LeftBarButtonItem = EditButtonItem;
-
-			//var addButton = new UIBarButtonItem (UIBarButtonSystemItem.Add, AddNewItem);
-			//NavigationItem.RightBarButtonItem = addButton;
-
 			TableView.Source = dataSource = new TableSource<MeetingInfo> ();
 
+			dataSource.OnRowSelected += (object sender, TableSource<MeetingInfo>.RowSelectedEventArgs e) => {
+				if (UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
+					DetailViewController.SetDetailItem (dataSource.Data [e.indexPath.Row]);
+			};
 			NWVDNUG.Core.DataService.FetchMeetings (fetchCallback);
 		}
 
@@ -135,7 +125,7 @@ namespace NWVDNUGMeetings
 //				if (UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
 //					controller.DetailViewController.SetDetailItem (objects [indexPath.Row]);
 //			}
-//		}
+		//		}
 
 		public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
 		{
