@@ -3,19 +3,20 @@ using System.Drawing;
 using System.Collections.Generic;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using NWVDNUG.Core.Contracts;
 
 namespace NWVDNUGMeetings
 {
 	public partial class DetailViewController : UIViewController
 	{
 		UIPopoverController masterPopoverController;
-		object detailItem;
+		MeetingInfo detailItem;
 
 		public DetailViewController (IntPtr handle) : base (handle)
 		{
 		}
 
-		public void SetDetailItem (object newDetailItem)
+		public void SetDetailItem (MeetingInfo newDetailItem)
 		{
 			if (detailItem != newDetailItem) {
 				detailItem = newDetailItem;
@@ -31,8 +32,14 @@ namespace NWVDNUGMeetings
 		void ConfigureView ()
 		{
 			// Update the user interface for the detail item
-			if (IsViewLoaded && detailItem != null)
-				detailDescriptionLabel.Text = detailItem.ToString ();
+			if (IsViewLoaded && detailItem != null) {
+				titleLabel.Text = detailItem.Title;
+				presenterLabel.Text = detailItem.SpeakerName;
+				mapView.AddPlacemark (new MonoTouch.MapKit.MKPlacemark (
+					new MonoTouch.CoreLocation.CLLocationCoordinate2D (0, 0),
+					new NSDictionary (detailItem.Location, null)
+				));
+			}
 		}
 
 		public override void DidReceiveMemoryWarning ()

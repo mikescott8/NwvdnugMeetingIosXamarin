@@ -1,9 +1,12 @@
-﻿//
-// This file has been generated automatically by MonoDevelop to store outlets and
-// actions made in the Xcode designer. If it is removed, they will be lost.
-// Manual changes to this file may not be handled correctly.
+// WARNING
 //
+// This file has been generated automatically by Xamarin Studio from the outlets and
+// actions declared in your storyboard file.
+// Manual changes to this file will not be maintained.
+//
+using System;
 using MonoTouch.Foundation;
+using MonoTouch.UIKit;
 using System.CodeDom.Compiler;
 
 namespace NWVDNUGMeetings
@@ -13,24 +16,30 @@ namespace NWVDNUGMeetings
 	{
 		[Outlet]
 		[GeneratedCodeAttribute ("iOS Designer", "1.0")]
-		MonoTouch.UIKit.UILabel detailDescriptionLabel { get; set; }
+		MonoTouch.MapKit.MKMapView mapView { get; set; }
 
 		[Outlet]
 		[GeneratedCodeAttribute ("iOS Designer", "1.0")]
-		MonoTouch.UIKit.UIToolbar toolbar { get; set; }
+		UILabel presenterLabel { get; set; }
+
+		[Outlet]
+		[GeneratedCodeAttribute ("iOS Designer", "1.0")]
+		UILabel titleLabel { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (detailDescriptionLabel != null) {
-				detailDescriptionLabel.Dispose ();
-				detailDescriptionLabel = null;
+			if (mapView != null) {
+				mapView.Dispose ();
+				mapView = null;
 			}
-			
-			if (toolbar != null) {
-				toolbar.Dispose ();
-				toolbar = null;
+			if (presenterLabel != null) {
+				presenterLabel.Dispose ();
+				presenterLabel = null;
+			}
+			if (titleLabel != null) {
+				titleLabel.Dispose ();
+				titleLabel = null;
 			}
 		}
 	}
 }
-
