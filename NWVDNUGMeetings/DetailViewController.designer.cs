@@ -1,12 +1,10 @@
 // WARNING
 //
-// This file has been generated automatically by Xamarin Studio from the outlets and
-// actions declared in your storyboard file.
-// Manual changes to this file will not be maintained.
+// This file has been generated automatically by Xamarin Studio to store outlets and
+// actions made in the UI designer. If it is removed, they will be lost.
+// Manual changes to this file may not be handled correctly.
 //
-using System;
 using MonoTouch.Foundation;
-using MonoTouch.UIKit;
 using System.CodeDom.Compiler;
 
 namespace NWVDNUGMeetings
@@ -15,27 +13,66 @@ namespace NWVDNUGMeetings
 	partial class DetailViewController
 	{
 		[Outlet]
-		[GeneratedCodeAttribute ("iOS Designer", "1.0")]
+		MonoTouch.UIKit.UILabel endLabel { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UILabel locationLabel { get; set; }
+
+		[Outlet]
 		MonoTouch.MapKit.MKMapView mapView { get; set; }
 
 		[Outlet]
-		[GeneratedCodeAttribute ("iOS Designer", "1.0")]
-		UILabel presenterLabel { get; set; }
+		MonoTouch.UIKit.UITextView notesLabel { get; set; }
 
 		[Outlet]
-		[GeneratedCodeAttribute ("iOS Designer", "1.0")]
-		UILabel titleLabel { get; set; }
+		MonoTouch.UIKit.UILabel presenterLabel { get; set; }
 
+		[Outlet]
+		MonoTouch.UIKit.UIButton speakerLinkButton { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UILabel startLabel { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UILabel titleLabel { get; set; }
+		
 		void ReleaseDesignerOutlets ()
 		{
+			if (speakerLinkButton != null) {
+				speakerLinkButton.Dispose ();
+				speakerLinkButton = null;
+			}
+
+			if (endLabel != null) {
+				endLabel.Dispose ();
+				endLabel = null;
+			}
+
+			if (locationLabel != null) {
+				locationLabel.Dispose ();
+				locationLabel = null;
+			}
+
 			if (mapView != null) {
 				mapView.Dispose ();
 				mapView = null;
 			}
+
+			if (notesLabel != null) {
+				notesLabel.Dispose ();
+				notesLabel = null;
+			}
+
 			if (presenterLabel != null) {
 				presenterLabel.Dispose ();
 				presenterLabel = null;
 			}
+
+			if (startLabel != null) {
+				startLabel.Dispose ();
+				startLabel = null;
+			}
+
 			if (titleLabel != null) {
 				titleLabel.Dispose ();
 				titleLabel = null;

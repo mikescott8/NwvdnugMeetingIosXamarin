@@ -35,6 +35,20 @@ namespace NWVDNUGMeetings
 			if (IsViewLoaded && detailItem != null) {
 				titleLabel.Text = detailItem.Title;
 				presenterLabel.Text = detailItem.SpeakerName;
+				notesLabel.Text = detailItem.Notes;
+				notesLabel.ContentInset = new UIEdgeInsets (0, 0, 0, 0);
+
+				startLabel.Text = detailItem.MeetingStartTime;
+				endLabel.Text = detailItem.MeetingEndTime;
+				if (string.IsNullOrWhiteSpace(detailItem.SpeakerBioLink)) {
+					speakerLinkButton.Hidden = true;
+				} else {
+					speakerLinkButton.TouchUpInside += (sender, e) => {
+						UIApplication.SharedApplication.OpenUrl(new NSUrl(detailItem.SpeakerBioLink));
+					};
+				}
+				locationLabel.Text = detailItem.Location;
+
 				mapView.AddPlacemark (new MonoTouch.MapKit.MKPlacemark (
 					new MonoTouch.CoreLocation.CLLocationCoordinate2D (0, 0),
 					new NSDictionary (detailItem.Location, null)
@@ -53,7 +67,7 @@ namespace NWVDNUGMeetings
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
+
 			// Perform any additional setup after loading the view, typically from a nib.
 			ConfigureView ();
 		}
