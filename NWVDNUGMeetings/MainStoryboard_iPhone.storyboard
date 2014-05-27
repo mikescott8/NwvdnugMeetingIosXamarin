@@ -152,6 +152,9 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.59215688710000003" green="0.47450983520000001" blue="0.25490197539999998" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="luU-t2-NhF" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" constant="-29" id="8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Meeting Details" id="cra-N8-TIN">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Sag-ch-2Td">
@@ -176,6 +179,7 @@
     </scenes>
     <resources>
         <image name="Default.png" width="16" height="16"/>
+        <image name="Default-568h.png" width="640" height="1136"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

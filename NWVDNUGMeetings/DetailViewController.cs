@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using NWVDNUG.Core.Contracts;
+using MonoTouch.MapKit;
+using MonoTouch.CoreLocation;
 
 namespace NWVDNUGMeetings
 {
@@ -47,12 +49,24 @@ namespace NWVDNUGMeetings
 						UIApplication.SharedApplication.OpenUrl(new NSUrl(detailItem.SpeakerBioLink));
 					};
 				}
-				locationLabel.Text = detailItem.Location;
 
-				mapView.AddPlacemark (new MonoTouch.MapKit.MKPlacemark (
-					new MonoTouch.CoreLocation.CLLocationCoordinate2D (0, 0),
-					new NSDictionary (detailItem.Location, null)
-				));
+				var pinLoc = new CLLocationCoordinate2D (0,0);
+
+				var geocoder = new CLGeocoder ();
+				geocoder.GeocodeAddress (detailItem.Location, (CLPlacemark[] locations, NSError error) => {
+					if (locations.Length>0) {
+						pinLoc = locations[0].Location.Coordinate;
+
+						var pin = new MKPointAnnotation ();
+						pin.Title = detailItem.Location.Substring(0, detailItem.Location.IndexOf(","));
+						pin.Subtitle = detailItem.Location.Substring (detailItem.Location.IndexOf (",") + 1);
+						pin.Coordinate = pinLoc;
+
+						mapView.AddAnnotation (pin);
+						mapView.SetRegion (new MKCoordinateRegion (pinLoc, new MKCoordinateSpan (0.25, 0.25ß)), true);
+					}
+				});
+				locationLabel.Text = detailItem.Location;
 			}
 		}
 
