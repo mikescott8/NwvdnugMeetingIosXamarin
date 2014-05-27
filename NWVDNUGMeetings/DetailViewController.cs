@@ -63,7 +63,7 @@ namespace NWVDNUGMeetings
 						pin.Coordinate = pinLoc;
 
 						mapView.AddAnnotation (pin);
-						mapView.SetRegion (new MKCoordinateRegion (pinLoc, new MKCoordinateSpan (0.25, 0.25ß)), true);
+						mapView.SetRegion (new MKCoordinateRegion (pinLoc, new MKCoordinateSpan (0.5, 0.5)), true);
 					}
 				});
 				locationLabel.Text = detailItem.Location;
