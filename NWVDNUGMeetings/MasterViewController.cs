@@ -10,11 +10,10 @@ namespace NWVDNUGMeetings
 	public partial class MasterViewController : UITableViewController
 	{
 		TableSource<MeetingInfo> dataSource;
+		LoadingOverlay loadingOverlay;
 
 		public MasterViewController (IntPtr handle) : base (handle)
 		{
-//			Title = NSBundle.MainBundle.LocalizedString ("Master", "Master");
-			
 			if (UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad) {
 				PreferredContentSize = new SizeF (320f, 600f);
 				ClearsSelectionOnViewWillAppear = false;
@@ -48,6 +47,9 @@ namespace NWVDNUGMeetings
 				if (UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
 					DetailViewController.SetDetailItem (dataSource.Data [e.indexPath.Row]);
 			};
+
+			loadingOverlay = new LoadingOverlay (UIScreen.MainScreen.Bounds);
+			View.Add (loadingOverlay);
 			NWVDNUG.Core.DataService.FetchMeetings (fetchCallback);
 		}
 
@@ -59,6 +61,7 @@ namespace NWVDNUGMeetings
 					TableView.SelectRow(NSIndexPath.FromRowSection(0,0),true,UITableViewScrollPosition.Top);
 					DetailViewController.SetDetailItem (dataSource.Data [0]);
 				}
+				loadingOverlay.Hide();
 			});
 		}
 
@@ -73,4 +76,3 @@ namespace NWVDNUGMeetings
 		}
 	}
 }
-
