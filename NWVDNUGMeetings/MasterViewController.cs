@@ -55,6 +55,10 @@ namespace NWVDNUGMeetings
 			InvokeOnMainThread (delegate {
 				dataSource.Data = meetings;
 				this.TableView.ReloadData ();
+				if (UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad) {
+					TableView.SelectRow(NSIndexPath.FromRowSection(0,0),true,UITableViewScrollPosition.Top);
+					DetailViewController.SetDetailItem (dataSource.Data [0]);
+				}
 			});
 		}
 
