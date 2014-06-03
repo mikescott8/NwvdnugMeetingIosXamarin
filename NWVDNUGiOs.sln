@@ -42,5 +42,13 @@ Global
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = NWVDNUGMeetings\NWVDNUGMeetings.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.VersionControlPolicy = $2
+		$2.inheritsSet = Mono
+		description = A simple list and details page for the upcoming meetings for the Northwest Vallet .Net User Group (NWVDNUG)
+		version = 0.8
 	EndGlobalSection
 EndGlobal
