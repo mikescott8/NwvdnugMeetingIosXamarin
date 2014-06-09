@@ -16,6 +16,8 @@ namespace NWVDNUGMeetings
 			set;
 		}
 
+		MasterViewController _masterView;
+
 		public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 		{
 			// Override point for customization after application launch.
@@ -33,6 +35,13 @@ namespace NWVDNUGMeetings
 
 				// Set the DetailViewController as the UISplitViewController Delegate.
 				splitViewController.WeakDelegate = detailViewController;
+
+				_masterView = masterViewController;
+			} else {
+				var navController = (UINavigationController)Window.RootViewController;
+				var masterViewController = (MasterViewController)navController.TopViewController;
+
+				_masterView = masterViewController;
 			}
 
 			return true;
@@ -58,6 +67,12 @@ namespace NWVDNUGMeetings
 		// This method is called when the application is about to terminate. Save data, if needed.
 		public override void WillTerminate (UIApplication application)
 		{
+		}
+		public override void OnActivated (UIApplication application)
+		{
+			// NOTE: Don't call the base implementation on a Model class
+			// see http://docs.xamarin.com/guides/ios/application_fundamentals/delegates,_protocols,_and_events
+			_masterView.refreshData ();
 		}
 	}
 }

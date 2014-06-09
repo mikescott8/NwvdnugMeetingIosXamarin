@@ -35,6 +35,12 @@ namespace NWVDNUGMeetings
 			// Release any cached data, images, etc that aren't in use.
 		}
 
+		public void refreshData() {
+			loadingOverlay = new LoadingOverlay (UIScreen.MainScreen.Bounds);
+			View.Add (loadingOverlay);
+			NWVDNUG.Core.DataService.FetchMeetings (fetchCallback);
+		}
+
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
@@ -48,14 +54,20 @@ namespace NWVDNUGMeetings
 					DetailViewController.SetDetailItem (dataSource.Data [e.indexPath.Row]);
 			};
 
-			loadingOverlay = new LoadingOverlay (UIScreen.MainScreen.Bounds);
-			View.Add (loadingOverlay);
-			NWVDNUG.Core.DataService.FetchMeetings (fetchCallback);
 		}
 
 		public void fetchCallback(List<MeetingInfo> meetings) {
 			InvokeOnMainThread (delegate {
 				dataSource.Data = meetings;
+
+				if (meetings==null) {
+					var msgAlert = new UIAlertView("No data", 
+						"No data was returned from service. Please check data connection. If working, then there was an error with the service or no data was found.",
+						null,
+						"Ok",
+						null);
+					msgAlert.Show();
+				}
 				this.TableView.ReloadData ();
 				if (UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad) {
 					TableView.SelectRow(NSIndexPath.FromRowSection(0,0),true,UITableViewScrollPosition.Top);
@@ -74,5 +86,7 @@ namespace NWVDNUGMeetings
 				((DetailViewController)segue.DestinationViewController).SetDetailItem (item);
 			}
 		}
+
+
 	}
 }

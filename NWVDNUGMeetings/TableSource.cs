@@ -25,7 +25,8 @@ namespace NWVDNUGMeetings
 		/// </summary>
 		public override int RowsInSection (UITableView tableview, int section)
 		{
-			return Data.Count;
+			var result = Data!=null ? Data.Count : 0;
+			return result;
 		}
 
 		/// <summary>
